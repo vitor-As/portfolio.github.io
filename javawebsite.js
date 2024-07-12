@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Back Button (Portfolio Work 1 Page)
 
   function goBack() {
-    window.location.href = 'Index.html';
+    window.location.href = 'index.html';
 }
 
 // ----------------------------------------------------------------------------------- //
