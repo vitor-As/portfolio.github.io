@@ -109,6 +109,7 @@ a {
 
 .buttonOrientation {
   display: flex; 
+  flex-direction: row;
 }
 
 .button-container {
