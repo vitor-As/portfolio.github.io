@@ -107,6 +107,10 @@ a {
     margin: 0 5%;
 }
 
+.buttonOrientation {
+  display: flex; 
+}
+
 .button-container {
     display: flex;
     gap: 20px;
