@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Vitor Pinto / Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo">Vitor Pinto</a>
+            <div class="nav-links">
+                <a href="index.html" data-translate="work">Work</a>
+                <a href="about.html" data-translate="about">About</a>
+                <a href="contact.html" data-translate="contact">Contact</a>
+                <button class="language-switch" onclick="toggleLanguage()">PT/EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- UX/UI Section -->
+        <section class="project-row">
+            <div class="project-info">
+                <h2 data-translate="uxuiTitle">UX/UI Design</h2>
+                <p data-translate="uxuiDesc">Digital experiences designed with user-centered approach.</p>
+            </div>
+            <div class="project-gallery">
+                <button class="gallery-nav prev" onclick="navigate('uxui', -1)">←</button>
+                <div class="gallery-container" id="uxui-gallery">
+                    <div class="gallery-item" onclick="openPortfolioItem(1)">
+                        <img src="./images/uxui/gtpreview.png" alt="UX/UI 1">
+                    </div>
+                    <div class="gallery-item" onclick="openPortfolioItem(2)">
+                        <img src="./images/uxui/editpreview.png" alt="UX/UI 2">
+                    </div>
+                </div>
+                <button class="gallery-nav next" onclick="navigate('uxui', 1)">→</button>
+            </div>
+        </section>
+
+        <!-- Logos Section -->
+        <section class="project-row">
+            <div class="project-info">
+                <h2 data-translate="logoTitle">Logo Design</h2>
+                <p data-translate="logoDesc">A collection of logo designs showcasing brand identity work for various clients.</p>
+            </div>
+            <div class="project-gallery">
+                <button class="gallery-nav prev" onclick="navigate('logos', -1)">←</button>
+                <div class="gallery-container" id="logos-gallery">
+                    <div class="gallery-item" onclick="openLightbox('./images/logos/GieluxPreviewbig.png')">
+                        <img src="./images/logos/GieluxPreview.png" alt="Logo 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/logos/SacramentoPreviewbig.png')">
+                        <img src="./images/logos/SacramentoPreview.png" alt="Logo 2">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/logos/MunaPreviewbig.png')">
+                        <img src="./images/logos/MunaPreview.png" alt="Logo 3">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/logos/SempreBioPreviewbig.png')">
+                        <img src="./images/logos/SempreBioPreview.png" alt="Logo 4">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/logos/BirutaPreviewbig.png')">
+                        <img src="./images/logos/BirutaPreview.png" alt="Logo 5">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/logos/QuadrosSoluçõesPreviewbig.png')">
+                        <img src="./images/logos/QuadrosSoluçõesPreview.png" alt="Logo 6">
+                    </div>
+                </div>
+                <button class="gallery-nav next" onclick="navigate('logos', 1)">→</button>
+            </div>
+        </section>
+
+        <!-- Music Artworks Section -->
+        <section class="project-row">
+            <div class="project-info">
+                <h2 data-translate="musicTitle">Music Artworks</h2>
+                <p data-translate="musicDesc">Creative album covers and music-related visual designs that capture the essence of sound through imagery.</p>
+            </div>
+            <div class="project-gallery">
+                <button class="gallery-nav prev" onclick="navigate('music', -1)">←</button>
+                <div class="gallery-container" id="music-gallery">
+                    <div class="gallery-item" onclick="openLightbox('./images/music/corona1big.png')">
+                        <img src="./images/music/corona1.png" alt="Music Artwork 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/mgs1big.png')">
+                        <img src="./images/music/mgs1.png" alt="Music Artwork 2">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/mgsatwbig.png')">
+                        <img src="./images/music/mgsatw.png" alt="Music Artwork 3">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/mgsneverneverbig.png')">
+                        <img src="./images/music/mgsnevernever.png" alt="Music Artwork 4">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/mgswwwbig.png')">
+                        <img src="./images/music/mgswww.png" alt="Music Artwork 5">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/nr1big.png')">
+                        <img src="./images/music/nr1.png" alt="Music Artwork 6">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/pa1big.png')">
+                        <img src="./images/music/pa1.png" alt="Music Artwork 7">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/dpp1big.png')">
+                        <img src="./images/music/dpp1.png" alt="Music Artwork 8">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/music/dpp2big.png')">
+                        <img src="./images/music/dpp2.png" alt="Music Artwork 9">
+                    </div>
+                </div>
+                <button class="gallery-nav next" onclick="navigate('music', 1)">→</button>
+            </div>
+        </section>
+
+        <!-- Flyers Section -->
+        <section class="project-row">
+            <div class="project-info">
+                <h2 data-translate="flyerTitle">Flyer Design</h2>
+                <p data-translate="flyerDesc">Print designs that combine striking visuals with effective communication.</p>
+            </div>
+            <div class="project-gallery">
+                <button class="gallery-nav prev" onclick="navigate('flyers', -1)">←</button>
+                <div class="gallery-container" id="flyers-gallery">
+                    <div class="gallery-item" onclick="openLightbox('./images/flyers/japwbig.png')">
+                        <img src="./images/flyers/japw.png" alt="Flyer 1">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/flyers/gig1big.png')">
+                        <img src="./images/flyers/gig1.png" alt="Flyer 2">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros1big.png')">
+                        <img src="./images/flyers/wros1.png" alt="Flyer 3">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros2big.png')">
+                        <img src="./images/flyers/wros2.png" alt="Flyer 4">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros3big.png')">
+                        <img src="./images/flyers/wros3.png" alt="Flyer 5">
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros4big.png')">
+                        <img src="./images/flyers/wros4.png" alt="Flyer 6">
+                    </div>
+                </div>
+                <button class="gallery-nav next" onclick="navigate('flyers', 1)">→</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="Enlarged project image">
+        </div>
+    </div>
+
+    <footer>
+        <p>Este site foi criado por mim e esta hospedado num repositório Git (GitHub Pages). Todos os trabalhos expostos neste site têm direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
