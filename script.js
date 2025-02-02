@@ -17,7 +17,9 @@ const translations = {
         musicTitle: "Music Artworks",
         musicDesc: "Album covers and music-related visual designs.",
         flyerTitle: "Flyer Design",
-        flyerDesc: "A collection of flyer designs."
+        flyerDesc: "A collection of flyer designs.",
+        productTitle: "Product Design",
+        productDesc: "Labels & ad's."
     },
     pt: {
         work: "Trabalhos",
@@ -36,7 +38,9 @@ const translations = {
         musicTitle: "Artwork Musical",
         musicDesc: "Capas de álbuns e designs visuais para bandas.",
         flyerTitle: "Design de Flyers",
-        flyerDesc: "Uma coleção de flyers."
+        flyerDesc: "Uma coleção de flyers.",
+        productTitle: "Produto",
+        productDesc: "Labels e visuais"
     }
 };
 
