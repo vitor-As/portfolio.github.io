@@ -105,6 +105,18 @@ function updateContent() {
         if (translations[currentLanguage][key]) {
             element.textContent = translations[currentLanguage][key];
         }
+
+         // Troca dinâmica do link do CV
+    const cvLink = document.getElementById('cv-link');
+    if (cvLink) {
+        if (currentLanguage === 'pt') {
+            cvLink.href = 'vitorcv2025.pdf';
+            cvLink.download = 'vitorcv2025.pdf';
+        } else {
+            cvLink.href = 'vitorcv2025-en.pdf';
+            cvLink.download = 'vitorcv2025-en.pdf';
+        }
+    }
     });
 }
 
@@ -223,4 +235,5 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Rest of your existing navigation code...
     }
+
 });
