@@ -358,6 +358,7 @@ footer {
 
 /* Tablet Styles */
 @media (max-width: 1024px) {
+    
     .project-info h2 {
         font-size: 2rem;
     }
