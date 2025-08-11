@@ -1,32 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Vitor Pinto / Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Fidelização Generali Tranquilidade - Vitor Pinto</title>
+    
+    <!-- Preconnect para fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Preload CSS e imagem crítica -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="./images/uxui/work1en.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="App de Fidelização Generali Tranquilidade - Estudo de caso UX/UI por Vitor Pinto">
+    <meta name="keywords" content="UX Design, UI Design, App Mobile, Programa Fidelização, Estudo Caso">
+    <meta name="author" content="Vitor Pinto">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="App de Fidelização Generali Tranquilidade - Vitor Pinto">
+    <meta property="og:description" content="Estudo de caso UX/UI Design para App de Fidelização Generali Tranquilidade">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="./images/uxui/work1en.png">
 </head>
 <body>
-    <nav>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Navegação principal">
         <div class="nav-content">
-            <a href="index.html" class="logo">Vitor Pinto</a>
+            <a href="index.html" class="logo" aria-label="Vitor Pinto - Página inicial">Vitor Pinto</a>
             <div class="nav-links">
-                <a href="index.html" data-translate="work">Work</a>
-                <a href="about.html" data-translate="about">About</a>
-                <a href="contact.html" data-translate="contact">Contact</a>
-                <button class="language-switch" onclick="toggleLanguage()">PT/EN</button>
+                <a href="index.html" data-translate="work">Trabalhos</a>
+                <a href="about.html" data-translate="about">Sobre</a>
+                <a href="contact.html" data-translate="contact">Contacto</a>
+                <div class="language-toggle pt" onclick="toggleLanguage()" role="button" aria-label="Alternar idioma" tabindex="0">
+                    <div class="toggle-slider">
+                        <span class="toggle-label">EN</span>
+                        <span class="toggle-label active">PT</span>
+                        <div class="toggle-button"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="portfolio-item-container">
-        <img src="./images/uxui/work1en.png" alt="Portfolio Work" class="portfolio-image">
+    <!-- Portfolio Item -->
+    <main class="portfolio-item-container" role="main">
+        <nav aria-label="Breadcrumb">
+            <a href="index.html#work" 
+               class="back-button"
+               aria-label="Voltar à secção trabalhos">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Voltar aos Trabalhos
+            </a>
+        </nav>
+        
+        <article>
+            <h1 class="sr-only">App de Fidelização Generali Tranquilidade - Estudo de Caso UX/UI Design</h1>
+            <img src="./images/uxui/work1en.png" 
+                 alt="App de Fidelização Generali Tranquilidade - Estudo de caso completo de UX/UI design mostrando pesquisa de utilizador, wireframes, protótipos e designs de interface final" 
+                 class="portfolio-image"
+                 loading="eager"
+                 width="1200"
+                 height="800">
+        </article>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="footerText">
+                    © 2025 Vitor Pinto. Todos os direitos reservados. Desenhado e desenvolvido com paixão no Porto, Portugal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "App de Fidelização Generali Tranquilidade",
+        "description": "Estudo de caso UX/UI Design para aplicação móvel de programa de fidelização",
+        "creator": {
+            "@type": "Person",
+            "name": "Vitor Pinto",
+            "jobTitle": "UX/UI Designer"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "App de Fidelização",
+            "applicationCategory": "MobileApplication",
+            "operatingSystem": "iOS, Android"
+        },
+        "keywords": ["UX Design", "UI Design", "App Mobile", "Programa Fidelização"],
+        "dateCreated": "2024",
+        "image": "./images/uxui/work1en.png",
+        "inLanguage": "pt"
+    }
+    </script>
+    
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
 </body>
 </html>

@@ -2,37 +2,206 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Vitor Pinto / Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Vitor Pinto</title>
+    
+    <!-- Preconnect para fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Preload CSS crítico -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="About Vitor Pinto - UX/UI Designer with 9+ years of experience in design thinking and frontend development">
+    <meta name="keywords" content="UX Designer, UI Designer, About, Portfolio, Design Experience">
+    <meta name="author" content="Vitor Pinto">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="About - Vitor Pinto">
+    <meta property="og:description" content="Learn more about Vitor Pinto's background and experience as a UX/UI Designer">
+    <meta property="og:type" content="website">
 </head>
 <body>
-    <nav>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <a href="index.html" class="logo">Vitor Santos</a>
+            <a href="index.html" class="logo" aria-label="Vitor Pinto - Homepage">Vitor Pinto</a>
             <div class="nav-links">
                 <a href="index.html" data-translate="work">Work</a>
-                <a href="about.html" data-translate="about">About</a>
+                <a href="about.html" class="active" data-translate="about">About</a>
                 <a href="contact.html" data-translate="contact">Contact</a>
-                <button class="language-switch" onclick="toggleLanguage()">PT/EN</button>
+                <div class="language-toggle" onclick="toggleLanguage()" role="button" aria-label="Toggle language" tabindex="0">
+                    <div class="toggle-slider">
+                        <span class="toggle-label active">EN</span>
+                        <span class="toggle-label">PT</span>
+                        <div class="toggle-button"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="about-container">
-        <div class="about-text" data-translate="aboutText">
-            Hi! I'm Vitor, passionate about creating intuitive and aesthetically pleasing digital experiences. At 32, I have a solid foundation in UX/UI Design (Research and Figma) and Digital Marketing, backed by relevant industry certifications. I'm a multifaceted professional with knowledge in HTML, CSS, some JavaScript, Photoshop, Illustrator, InDesign, and Affinity software, which allows me to bring my designs to life and ensure a fluid user experience. Additionally, my familiarity with the Azure platform and SQL opens doors for creating scalable and robust solutions.
+    <!-- About Section -->
+    <main class="about-container" role="main">
+        <div class="about-hero">
+            <div class="hero-badge">
+                <div class="status-dot" aria-hidden="true"></div>
+                <span data-translate="available">Available for remote work</span>
+            </div>
+            <h1 class="about-title">
+                <span data-translate="aboutTitle">About Me</span>
+            </h1>
         </div>
-        <div class="about-buttons">
-            <a href="https://www.linkedin.com/in/vitor-pinto-734281220/" class="about-button" target="_blank" rel="noopener" rel="noreferrer" data-translate="linkedin">LinkedIn</a>
-            <a href="vitorcv2025.pdf" class="about-button" target="_blank" rel="noopener noreferrer" download="vitorcv2025.pdf" data-translate="downloadCV">Download CV</a>
+
+        <div class="about-content">
+            <div class="about-text" data-translate="aboutText">
+                Hi! I'm Vitor, a UX/UI designer that combines design thinking methodology with technical frontend skills to deliver intuitive interfaces and meaningful brand identities. With 9+ years of design experience, I believe every project is an opportunity to understand users deeply and create solutions that truly make a difference in their lives.
+            </div>
+
+            <section class="skills-section" aria-labelledby="skills-heading">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 data-translate="uxuiSkills" id="skills-heading">UX/UI Skills</h3>
+                        <ul role="list">
+                            <li>User Research & Interviews</li>
+                            <li>Personas & Journey Mapping</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>Design Systems</li>
+                            <li>Usability Testing</li>
+                            <li>A/B Testing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 data-translate="technicalSkills">Technical Skills</h3>
+                        <ul role="list">
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>Figma, Adobe Creative Suite</li>
+                            <li>Git, OutSystems, SQL</li>
+                            <li>Azure (Beginner)</li>
+                            <li>Google Analytics</li>
+                            <li>Responsive Web Design</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3 data-translate="designProcess">Design Process</h3>
+                        <ul role="list">
+                            <li>Discover: User research & analysis</li>
+                            <li>Define: Problem definition & personas</li>
+                            <li>Design: Wireframing & visual design</li>
+                            <li>Deliver: Implementation support</li>
+                            <li>Optimize: Testing & iteration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="certifications-section" aria-labelledby="certifications-heading">
+                <h3 data-translate="certs" id="certifications-heading">Recent Certifications</h3>
+                <div class="certifications-grid">
+                    <article class="cert-card">
+                        <h4>UX/UI Design</h4>
+                        <p data-translate="fcup">Faculty of Sciences, University of Porto</p>
+                        <span>2025</span>
+                    </article>
+                    <article class="cert-card">
+                        <h4>OutSystems Frontend Development</h4>
+                        <p data-translate="fcup">Faculty of Sciences, University of Porto</p>
+                        <span>2025</span>
+                    </article>
+                    <article class="cert-card">
+                        <h4>UX ROI & Business Impact</h4>
+                        <p>EDIT. - Disruptive Digital Education</p>
+                        <span>2025</span>
+                    </article>
+                    <article class="cert-card">
+                        <h4>User Experience & Interface</h4>
+                        <p>EDIT. - Disruptive Digital Education</p>
+                        <span>2024</span>
+                    </article>
+                </div>
+            </section>
+
+            <div class="about-buttons">
+                <a href="https://www.linkedin.com/in/vitor-pinto-734281220/" 
+                   class="about-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   data-translate="linkedin"
+                   aria-label="Connect with Vitor Pinto on LinkedIn">LinkedIn</a>
+                <a id="cv-link" 
+                   href="vitorcv2025-en.pdf" 
+                   class="about-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   download 
+                   data-translate="downloadCV"
+                   aria-label="Download Vitor Pinto's CV">Download CV</a>
+                <a href="contact.html" 
+                   class="about-button" 
+                   data-translate="getInTouch"
+                   aria-label="Get in touch with Vitor Pinto">Get in Touch</a>
+            </div>
         </div>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="footerText">
+                    © 2025 Vitor Pinto. All rights reserved. Designed & developed with passion in Porto, Portugal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Vitor Pinto",
+            "jobTitle": "UX/UI Designer",
+            "description": "UX/UI Designer with 9+ years of experience combining design thinking methodology with technical frontend skills",
+            "knowsAbout": [
+                "User Research",
+                "Wireframing",
+                "Prototyping", 
+                "Design Systems",
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Figma"
+            ],
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "name": "UX/UI Design",
+                    "credentialCategory": "certificate",
+                    "educationalLevel": "Professional",
+                    "recognizedBy": {
+                        "@type": "EducationalOrganization",
+                        "name": "Faculty of Sciences, University of Porto"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 </body>
 </html>

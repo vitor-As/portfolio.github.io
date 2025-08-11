@@ -2,200 +2,483 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Vitor Pinto / Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitor Pinto - UX/UI Designer</title>
+    
+    <!-- Preconnect para fonts (performance critical) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Preload CSS crítico -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    
+    <!-- Meta tags para SEO e performance -->
+    <meta name="description" content="Vitor Pinto - UX/UI Designer with 9+ years of experience creating intuitive interfaces and meaningful brand identities">
+    <meta name="keywords" content="UX Designer, UI Designer, Porto, Portugal, Design Thinking, Frontend">
+    <meta name="author" content="Vitor Pinto">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vitor Pinto - UX/UI Designer">
+    <meta property="og:description" content="UX/UI Designer with 9+ years of experience combining design thinking methodology with technical frontend skills">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vitorpinto.design">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" href="./images/uxui/gtpreview.png" as="image">
 </head>
 <body>
-    <nav>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <a href="index.html" class="logo">Vitor Pinto</a>
+            <a href="index.html" class="logo" aria-label="Vitor Pinto - Homepage">Vitor Pinto</a>
             <div class="nav-links">
-                <a href="index.html" data-translate="work">Work</a>
+                <a href="index.html" class="active" data-translate="work">Work</a>
                 <a href="about.html" data-translate="about">About</a>
                 <a href="contact.html" data-translate="contact">Contact</a>
-                <button class="language-switch" onclick="toggleLanguage()">PT/EN</button>
+                <div class="language-toggle" onclick="toggleLanguage()" role="button" aria-label="Toggle language" tabindex="0">
+                    <div class="toggle-slider">
+                        <span class="toggle-label active">EN</span>
+                        <span class="toggle-label">PT</span>
+                        <div class="toggle-button"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main>
-        <!-- UX/UI Section -->
-        <section class="project-row">
-            <div class="project-info">
-                <h2 data-translate="uxuiTitle">UX/UI Design</h2>
-                <p data-translate="uxuiDesc">Digital experiences designed with user-centered approach.</p>
+    <!-- Hero Section -->
+    <section class="hero" role="banner">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="status-dot" aria-hidden="true"></div>
+                <span data-translate="available">Available for remote work</span>
             </div>
-            <div class="project-gallery">
-                <button class="gallery-nav prev" onclick="navigate('uxui', -1)">←</button>
-                <div class="gallery-container" id="uxui-gallery">
-                    <div class="gallery-item" onclick="openPortfolioItem(1)">
-                        <img src="./images/uxui/gtpreview.png" alt="UX/UI 1">
-                    </div>
-                    <div class="gallery-item" onclick="openPortfolioItem(2)">
-                        <img src="./images/uxui/editpreview.png" alt="UX/UI 2">
-                    </div>
-                    <div class="gallery-item" onclick="openPortfolioItem(3)">
-                        <img src="./images/uxui/cookiengpreview.png" alt="UX/UI 3">
-                    </div>
-                </div>
-                <button class="gallery-nav next" onclick="navigate('uxui', 1)">→</button>
+            <h1 class="hero-title">
+                <span data-translate="heroTitle">Designing digital experiences that</span>
+                <span class="gradient-text" data-translate="heroHighlight">make a difference</span>
+            </h1>
+            <p class="hero-subtitle" data-translate="heroSubtitle">
+                UX/UI Designer with 2+ years of experience combining design thinking methodology 
+                with technical frontend skills to create intuitive interfaces and meaningful brand identities.
+            </p>
+            <div class="hero-cta">
+                <a href="#work" class="btn-primary" data-translate="viewWork">View My Work</a>
+                <a href="contact.html" class="btn-secondary" data-translate="getInTouch">Get in Touch</a>
             </div>
-        </section>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
 
-        <!-- Logos Section -->
-        <section class="project-row">
-            <div class="project-info">
-                <h2 data-translate="logoTitle">Logo Design</h2>
-                <p data-translate="logoDesc">A collection of logo designs showcasing brand identity work for various clients.</p>
-            </div>
-            <div class="project-gallery">
-                <button class="gallery-nav prev" onclick="navigate('logos', -1)">←</button>
-                <div class="gallery-container" id="logos-gallery">
-                    <div class="gallery-item" onclick="openLightbox('./images/logos/GieluxPreviewbig.png')">
-                        <img src="./images/logos/GieluxPreview.png" alt="Logo 1">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/logos/SacramentoPreviewbig.png')">
-                        <img src="./images/logos/SacramentoPreview.png" alt="Logo 2">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/logos/MunaPreviewbig.png')">
-                        <img src="./images/logos/MunaPreview.png" alt="Logo 3">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/logos/SempreBioPreviewbig.png')">
-                        <img src="./images/logos/SempreBioPreview.png" alt="Logo 4">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/logos/BirutaPreviewbig.png')">
-                        <img src="./images/logos/BirutaPreview.png" alt="Logo 5">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/logos/QuadrosSoluçõesPreviewbig.png')">
-                        <img src="./images/logos/QuadrosSoluçõesPreview.png" alt="Logo 6">
-                    </div>
-                </div>
-                <button class="gallery-nav next" onclick="navigate('logos', 1)">→</button>
-            </div>
-        </section>
+    <!-- Work Section -->
+    <main id="work" class="work-section" role="main">
+        <div class="container">
+            <!-- <div class="section-header">
+                <h2 class="section-title" data-translate="selectedWork">Selected Work</h2>
+                <p class="section-subtitle" data-translate="workDescription">
+                    A showcase of projects that demonstrate my approach to user-centered design and technical implementation.
+                </p>
+            </div> -->
 
-                <!-- Product Section -->
-                <section class="project-row">
-                    <div class="project-info">
-                        <h2 data-translate="productTitle">Product Design</h2>
-                        <p data-translate="productDesc">Labels & ad's.</p>
-                    </div>
-                    <div class="project-gallery">
-                        <!-- <button class="gallery-nav prev" onclick="navigate('flyers', -1)">←</button> -->
-                        <div class="gallery-container" id="flyers">
-                            <div class="gallery-item" onclick="openLightbox('./images/product/corpusAdBig.png')">
-                                <img src="./images/product/corpusAd.png" alt="Product 1">
-                            </div>
-                            <div class="gallery-item" onclick="openLightbox('./images/product/corpusBig.png')">
-                                <img src="./images/product/corpus.png" alt="Product 2">
-                            </div>
-                            <div class="gallery-item" onclick="openLightbox('./images/product/sensusAdBig.png')">
-                                <img src="./images/product/sensusAd.png" alt="Product 3">
-                            </div>
-                            <div class="gallery-item" onclick="openLightbox('./images/product/sensusBig.png')">
-                                <img src="./images/product/sensus.png" alt="Product 4">
-                            </div>
-                        <!-- <button class="gallery-nav next" onclick="navigate('flyers', 1)">→</button> -->
-                    </div>
-                </section>
-
-        <!-- Music Artworks Section -->
-        <section class="project-row">
-            <div class="project-info">
-                <h2 data-translate="musicTitle">Music Artworks</h2>
-                <p data-translate="musicDesc">Creative album covers and music-related visual designs that capture the essence of sound through imagery.</p>
-            </div>
-            <div class="project-gallery">
-                <button class="gallery-nav prev" onclick="navigate('music', -1)">←</button>
-                <div class="gallery-container" id="music-gallery">
-                    <div class="gallery-item" onclick="openLightbox('./images/music/corona1big.png')">
-                        <img src="./images/music/corona1.png" alt="Music Artwork 1">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/mgs1big.png')">
-                        <img src="./images/music/mgs1.png" alt="Music Artwork 2">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/mgsatwbig.png')">
-                        <img src="./images/music/mgsatw.png" alt="Music Artwork 3">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/mgsneverneverbig.png')">
-                        <img src="./images/music/mgsnevernever.png" alt="Music Artwork 4">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/mgswwwbig.png')">
-                        <img src="./images/music/mgswww.png" alt="Music Artwork 5">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/nr1big.png')">
-                        <img src="./images/music/nr1.png" alt="Music Artwork 6">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/pa1big.png')">
-                        <img src="./images/music/pa1.png" alt="Music Artwork 7">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/dpp1big.png')">
-                        <img src="./images/music/dpp1.png" alt="Music Artwork 8">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/music/nr2big.png')">
-                        <img src="./images/music/nr2.png" alt="Music Artwork 9">
-                    </div>
+            <!-- UX/UI Design -->
+            <div class="project-category">
+                <div class="category-header">
+                    <h3 class="category-title" data-translate="uxuiTitle">UX/UI Design</h3>
+                    <p class="category-desc" data-translate="uxuiDesc">Digital experiences designed with user-centered approach and modern interface patterns.</p>
                 </div>
-                <button class="gallery-nav next" onclick="navigate('music', 1)">→</button>
-            </div>
-        </section>
-
-        <!-- Flyers Section -->
-        <section class="project-row">
-            <div class="project-info">
-                <h2 data-translate="flyerTitle">Flyer Design</h2>
-                <p data-translate="flyerDesc">Print designs that combine striking visuals with effective communication.</p>
-            </div>
-            <div class="project-gallery">
-                <button class="gallery-nav prev" onclick="navigate('flyers', -1)">←</button>
-                <div class="gallery-container" id="flyers-gallery">
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/cbbig.png')">
-                        <img src="./images/flyers/cb.png" alt="Flyer 8">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/twbig.png')">
-                        <img src="./images/flyers/tw.png" alt="Flyer 7">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/japwbig.png')">
-                        <img src="./images/flyers/japw.png" alt="Flyer 1">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/gig1big.png')">
-                        <img src="./images/flyers/gig1.png" alt="Flyer 2">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros1big.png')">
-                        <img src="./images/flyers/wros1.png" alt="Flyer 3">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros2big.png')">
-                        <img src="./images/flyers/wros2.png" alt="Flyer 4">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros3big.png')">
-                        <img src="./images/flyers/wros3.png" alt="Flyer 5">
-                    </div>
-                    <div class="gallery-item" onclick="openLightbox('./images/flyers/wros4big.png')">
-                        <img src="./images/flyers/wros4.png" alt="Flyer 6">
-                    </div>
+                <div class="project-grid" id="uxui-grid">
+                    <article class="project-card" onclick="openPortfolioItem(1)" role="button" tabindex="0" aria-label="View Generali Tranquilidade Loyalty App project">
+                        <div class="project-image">
+                            <img src="./images/uxui/gtpreview.png" 
+                                 alt="Generali Tranquilidade Loyalty App UX/UI Design" 
+                                 loading="lazy"
+                                 width="400" 
+                                 height="250">
+                            <div class="project-overlay" aria-hidden="true">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4>Generali Tranquilidade Loyalty App</h4>
+                            <span class="project-tag">UX Research & Design</span>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" onclick="openPortfolioItem(2)" role="button" tabindex="0" aria-label="View EDIT School Management System project">
+                        <div class="project-image">
+                            <img src="./images/uxui/editpreview.png" 
+                                 alt="EDIT School Management System UI/UX Design" 
+                                 loading="lazy"
+                                 width="400" 
+                                 height="250">
+                            <div class="project-overlay" aria-hidden="true">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-translate="portfolio2">Edit School Management System</h4>
+                            <span class="project-tag">UI/UX Design</span>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" onclick="openPortfolioItem(3)" role="button" tabindex="0" aria-label="View Cookieng project">
+                        <div class="project-image">
+                            <img src="./images/uxui/cookiengpreview.png" 
+                                 alt="Cookieng - Sweets with a Twist User Experience Design" 
+                                 loading="lazy"
+                                 width="400" 
+                                 height="250">
+                            <div class="project-overlay" aria-hidden="true">
+                                <span class="view-project">View Project</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h4 data-translate="portfolio3">Cookieng - Sweets with a Twist</h4>
+                            <span class="project-tag">User Experience</span>
+                        </div>
+                    </article>
                 </div>
-                <button class="gallery-nav next" onclick="navigate('flyers', 1)">→</button>
             </div>
-        </section>
+
+            <!-- Brand Identity -->
+            <section class="project-category">
+                <div class="category-header">
+                    <h3 class="category-title" data-translate="logoTitle">Brand Identity</h3>
+                    <p class="category-desc" data-translate="logoDesc">Comprehensive brand systems and visual identities that communicate brand values effectively.</p>
+                </div>
+                <div class="project-grid brand-grid">
+                    <article class="brand-card" onclick="openLightbox('./images/logos/GieluxPreviewbig.png')" role="button" tabindex="0" aria-label="View Gielux brand identity">
+                        <img src="./images/logos/GieluxPreview.png" 
+                             alt="Gielux Brand Identity Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                        <div class="brand-overlay" aria-hidden="true">
+                            <h4>Gielux</h4>
+                            <span>Brand Identity</span>
+                        </div>
+                    </article>
+                    
+                    <article class="brand-card" onclick="openLightbox('./images/logos/SacramentoPreviewbig.png')" role="button" tabindex="0" aria-label="View Sacramento logo design">
+                        <img src="./images/logos/SacramentoPreview.png" 
+                             alt="Sacramento Logo Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                        <div class="brand-overlay" aria-hidden="true">
+                            <h4>Sacramento</h4>
+                            <span>Logo Design</span>
+                        </div>
+                    </article>
+                    
+                    <article class="brand-card" onclick="openLightbox('./images/logos/MunaPreviewbig.png')" role="button" tabindex="0" aria-label="View Muna visual identity">
+                        <img src="./images/logos/MunaPreview.png" 
+                             alt="Muna Visual Identity Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                        <div class="brand-overlay" aria-hidden="true">
+                            <h4>Muna</h4>
+                            <span>Visual Identity</span>
+                        </div>
+                    </article>
+                    
+                    <article class="brand-card" onclick="openLightbox('./images/logos/SempreBioPreviewbig.png')" role="button" tabindex="0" aria-label="View Sempre Bio brand system">
+                        <img src="./images/logos/SempreBioPreview.png" 
+                             alt="Sempre Bio Brand System Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                        <div class="brand-overlay" aria-hidden="true">
+                            <h4>Sempre Bio</h4>
+                            <span>Brand System</span>
+                        </div>
+                    </article>
+                    
+                    <article class="brand-card" onclick="openLightbox('./images/logos/BirutaPreviewbig.png')" role="button" tabindex="0" aria-label="View Biruta logo and identity">
+                        <img src="./images/logos/BirutaPreview.png" 
+                             alt="Biruta Logo & Identity Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                        <div class="brand-overlay" aria-hidden="true">
+                            <h4>Biruta</h4>
+                            <span>Logo & Identity</span>
+                        </div>
+                    </article>
+                    
+                    <article class="brand-card" onclick="openLightbox('./images/logos/QuadrosSoluçõesPreviewbig.png')" role="button" tabindex="0" aria-label="View Quadros Soluções corporate identity">
+                        <img src="./images/logos/QuadrosSoluçõesPreview.png" 
+                             alt="Quadros Soluções Corporate Identity Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                        <div class="brand-overlay" aria-hidden="true">
+                            <h4>Quadros Soluções</h4>
+                            <span>Corporate Identity</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Music Artworks -->
+            <section class="project-category">
+                <div class="category-header">
+                    <h3 class="category-title" data-translate="musicTitle">Music Artworks</h3>
+                    <p class="category-desc" data-translate="musicDesc">Creative album covers and music-related visual designs that capture the essence of sound through imagery.</p>
+                </div>
+                <div class="music-grid">
+                    <article class="music-card" onclick="openLightbox('./images/music/corona1big.png')" role="button" tabindex="0" aria-label="View Corona music artwork">
+                        <img src="./images/music/corona1.png" 
+                             alt="Corona Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/mgs1big.png')" role="button" tabindex="0" aria-label="View MGS music artwork">
+                        <img src="./images/music/mgs1.png" 
+                             alt="MGS Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/mgsatwbig.png')" role="button" tabindex="0" aria-label="View MGS ATW music artwork">
+                        <img src="./images/music/mgsatw.png" 
+                             alt="MGS ATW Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/mgsneverneverbig.png')" role="button" tabindex="0" aria-label="View MGS Never Never music artwork">
+                        <img src="./images/music/mgsnevernever.png" 
+                             alt="MGS Never Never Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/mgswwwbig.png')" role="button" tabindex="0" aria-label="View MGS WWW music artwork">
+                        <img src="./images/music/mgswww.png" 
+                             alt="MGS WWW Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/nr1big.png')" role="button" tabindex="0" aria-label="View NR music artwork">
+                        <img src="./images/music/nr1.png" 
+                             alt="NR Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/pa1big.png')" role="button" tabindex="0" aria-label="View PA music artwork">
+                        <img src="./images/music/pa1.png" 
+                             alt="PA Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/dpp1big.png')" role="button" tabindex="0" aria-label="View DPP music artwork">
+                        <img src="./images/music/dpp1.png" 
+                             alt="DPP Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="music-card" onclick="openLightbox('./images/music/nr2big.png')" role="button" tabindex="0" aria-label="View NR2 music artwork">
+                        <img src="./images/music/nr2.png" 
+                             alt="NR2 Music Album Artwork" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                </div>
+            </section>
+
+            <!-- Product Design -->
+            <section class="project-category">
+                <div class="category-header">
+                    <h3 class="category-title" data-translate="productTitle">Product Design</h3>
+                    <p class="category-desc" data-translate="productDesc">Print designs that combine striking visuals with effective communication for product marketing.</p>
+                </div>
+                <div class="print-grid">
+                    <article class="print-card" onclick="openLightbox('./images/product/corpusAdBig.png')" role="button" tabindex="0" aria-label="View Corpus advertisement design">
+                        <img src="./images/product/corpusAd.png" 
+                             alt="Corpus Product Advertisement Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/product/corpusBig.png')" role="button" tabindex="0" aria-label="View Corpus product design">
+                        <img src="./images/product/corpus.png" 
+                             alt="Corpus Product Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/product/sensusAdBig.png')" role="button" tabindex="0" aria-label="View Sensus advertisement design">
+                        <img src="./images/product/sensusAd.png" 
+                             alt="Sensus Product Advertisement Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/product/sensusBig.png')" role="button" tabindex="0" aria-label="View Sensus product design">
+                        <img src="./images/product/sensus.png" 
+                             alt="Sensus Product Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                </div>
+            </section>
+
+            <!-- Flyer Design -->
+            <section class="project-category">
+                <div class="category-header">
+                    <h3 class="category-title" data-translate="flyerTitle">Flyer Design</h3>
+                    <p class="category-desc" data-translate="flyerDesc">Event and promotional materials designed to capture attention and communicate key information effectively.</p>
+                </div>
+                <div class="print-grid">
+                    <article class="print-card" onclick="openLightbox('./images/flyers/cbbig.png')" role="button" tabindex="0" aria-label="View CB flyer design">
+                        <img src="./images/flyers/cb.png" 
+                             alt="CB Event Flyer Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/twbig.png')" role="button" tabindex="0" aria-label="View TW flyer design">
+                        <img src="./images/flyers/tw.png" 
+                             alt="TW Event Flyer Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/japwbig.png')" role="button" tabindex="0" aria-label="View JAPW flyer design">
+                        <img src="./images/flyers/japw.png" 
+                             alt="JAPW Event Flyer Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/gig1big.png')" role="button" tabindex="0" aria-label="View Gig flyer design">
+                        <img src="./images/flyers/gig1.png" 
+                             alt="Gig Event Flyer Design" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/wros1big.png')" role="button" tabindex="0" aria-label="View WROS flyer design 1">
+                        <img src="./images/flyers/wros1.png" 
+                             alt="WROS Event Flyer Design 1" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/wros2big.png')" role="button" tabindex="0" aria-label="View WROS flyer design 2">
+                        <img src="./images/flyers/wros2.png" 
+                             alt="WROS Event Flyer Design 2" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/wros3big.png')" role="button" tabindex="0" aria-label="View WROS flyer design 3">
+                        <img src="./images/flyers/wros3.png" 
+                             alt="WROS Event Flyer Design 3" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                    
+                    <article class="print-card" onclick="openLightbox('./images/flyers/wros4big.png')" role="button" tabindex="0" aria-label="View WROS flyer design 4">
+                        <img src="./images/flyers/wros4.png" 
+                             alt="WROS Event Flyer Design 4" 
+                             loading="lazy"
+                             width="200" 
+                             height="200">
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-title">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
         <div class="lightbox-content">
-            <img id="lightbox-image" src="" alt="Enlarged project image">
+            <img id="lightbox-image" src="" alt="" role="img">
         </div>
     </div>
 
-    <footer>
-        <p>Este site foi criado por mim e esta hospedado num repositório Git (GitHub Pages). Todos os trabalhos expostos neste site têm direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="footerText">
+                    © 2025 Vitor Pinto. All rights reserved. Designed & developed with passion in Porto, Portugal.
+                </p>
+            </div>
+        </div>
     </footer>
 
+    <!-- JavaScript (carregado no final para melhor performance) -->
     <script src="script.js"></script>
+    
+    <!-- Schema.org structured data para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Vitor Pinto",
+        "jobTitle": "UX/UI Designer",
+        "description": "UX/UI Designer with 9+ years of experience combining design thinking methodology with technical frontend skills",
+        "url": "https://vitorpinto.design",
+        "sameAs": [
+            "https://www.linkedin.com/in/vitor-pinto-734281220/"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto",
+            "addressCountry": "Portugal"
+        },
+        "knowsAbout": [
+            "UX Design",
+            "UI Design", 
+            "Design Thinking",
+            "Frontend Development",
+            "Brand Identity",
+            "User Research"
+        ]
+    }
+    </script>
 </body>
-
 </html>

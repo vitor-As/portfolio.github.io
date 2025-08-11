@@ -2,31 +2,129 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Vitor Pinto / Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT School Management System - Vitor Pinto</title>
+    
+    <!-- Preconnect para fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    
+    <!-- Preload CSS e imagem crítica -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="./images/uxui/work2.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+    
+    <!-- Meta tags -->
+    <meta name="description" content="EDIT School Management System - UI/UX Design case study by Vitor Pinto">
+    <meta name="keywords" content="UX Design, UI Design, School Management, Education Platform, Case Study">
+    <meta name="author" content="Vitor Pinto">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="EDIT School Management System - Vitor Pinto">
+    <meta property="og:description" content="UI/UX Design case study for EDIT School Management System">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="./images/uxui/work2.png">
 </head>
 <body>
-    <nav>
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
         <div class="nav-content">
-            <a href="index.html" class="logo">Vitor Pinto</a>
+            <a href="index.html" class="logo" aria-label="Vitor Pinto - Homepage">Vitor Pinto</a>
             <div class="nav-links">
                 <a href="index.html" data-translate="work">Work</a>
                 <a href="about.html" data-translate="about">About</a>
                 <a href="contact.html" data-translate="contact">Contact</a>
-                <button class="language-switch" onclick="toggleLanguage()">PT/EN</button>
+                <div class="language-toggle" onclick="toggleLanguage()" role="button" aria-label="Toggle language" tabindex="0">
+                    <div class="toggle-slider">
+                        <span class="toggle-label active">EN</span>
+                        <span class="toggle-label">PT</span>
+                        <div class="toggle-button"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="portfolio-item-container">
-        <img src="./images/uxui/work2.png" alt="Portfolio Work" class="portfolio-image">
+    <!-- Portfolio Item -->
+    <main class="portfolio-item-container" role="main">
+        <nav aria-label="Breadcrumb">
+            <a href="index.html#work" 
+               class="back-button"
+               aria-label="Back to work section">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Back to Work
+            </a>
+        </nav>
+        
+        <article>
+            <h1 class="sr-only">EDIT School Management System - UI/UX Design Case Study</h1>
+            <img src="./images/uxui/work2.png" 
+                 alt="EDIT School Management System - Complete UI/UX design case study showing user interface design, system architecture, and educational platform solutions" 
+                 class="portfolio-image"
+                 loading="eager"
+                 width="1200"
+                 height="800">
+        </article>
     </main>
 
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <p data-translate="footerText">
+                    © 2025 Vitor Pinto. All rights reserved. Designed & developed with passion in Porto, Portugal.
+                </p>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "EDIT School Management System",
+        "description": "UI/UX Design case study for a comprehensive school management platform",
+        "creator": {
+            "@type": "Person",
+            "name": "Vitor Pinto",
+            "jobTitle": "UX/UI Designer"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "name": "School Management System",
+            "applicationCategory": "WebApplication",
+            "applicationSubCategory": "Educational Software"
+        },
+        "keywords": ["UX Design", "UI Design", "Education Platform", "School Management"],
+        "dateCreated": "2024",
+        "image": "./images/uxui/work2.png"
+    }
+    </script>
+    
+    <style>
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
 </body>
 </html>
