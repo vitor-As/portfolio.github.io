@@ -1,105 +1,99 @@
 // Language translations (optimizado)
 const translations = {
-    en: {
-        work: "Work",
-        about: "About",
-        contact: "Contact",
-        available: "Available for remote work",
-        heroTitle: "Designing digital experiences that",
-        heroHighlight: "make a difference",
-        heroSubtitle: "UX/UI Designer with 9+ years of experience combining design thinking methodology with technical frontend skills to create intuitive interfaces and meaningful brand identities.",
-        viewWork: "View My Work",
-        getInTouch: "Get in Touch",
-        selectedWork: "Selected Work",
-        workDescription: "A showcase of projects that demonstrate my approach to user-centered design and technical implementation.",
-        uxuiTitle: "UX/UI Design",
-        uxuiDesc: "Digital experiences designed with user-centered approach and modern interface patterns.",
-        portfolio2: "EDIT School Management System",
-        portfolio3: "Cookieng - Sweets with a Twist",
-        logoTitle: "Brand Identity",
-        logoDesc: "Comprehensive brand systems and visual identities that communicate brand values effectively.",
-        musicTitle: "Music Artworks",
-        musicDesc: "Creative album covers and music-related visual designs that capture the essence of sound through imagery.",
-        productTitle: "Product Design", 
-        productDesc: "Print designs that combine striking visuals with effective communication for product marketing.",
-        flyerTitle: "Flyer Design",
-        flyerDesc: "Event and promotional materials designed to capture attention and communicate key information effectively.",
-        aboutTitle: "About Me",
-        aboutText: "Hi! I'm Vitor, a UX/UI designer that combines design thinking methodology with technical frontend skills to deliver intuitive interfaces and meaningful brand identities. With 9+ years of design experience, I believe every project is an opportunity to understand users deeply and create solutions that truly make a difference in their lives.",
-        linkedin: "LinkedIn",
-        downloadCV: "Download CV",
-        uxuiSkills: "UX/UI Skills",
-        technicalSkills: "Technical Skills",
-        designProcess: "Design Process",
-        certs: "Recent Certifications",
-        fcup: "Faculty of Sciences, University of Porto",
-        contactTitle: "Let's work together",
-        copy: "Copy Email",
-        copied: "Copied!",
-        location: "Location",
-        locationValue: "Porto, Portugal",
-        languages: "Languages",
-        languagesValue: "Portuguese (Native), English (C1)",
-        workPreference: "Work Preference",
-        workPreferenceValue: "Remote, Hybrid, On-site",
-        viewLinkedin: "Connect with me professionally",
-        viewAbout: "Learn more about my background",
-        viewCV: "View my complete resume",
-        footerText: "© 2025 Vitor Pinto. All rights reserved. Designed & developed with passion in Porto, Portugal."
-    },
+en: {
+    work: "Work",
+    about: "About",
+    contact: "Contact",
+    available: "Available for remote work",
+    heroTitle: "Designing digital experiences that",
+    heroHighlight: "make a difference",
+    heroSubtitle: "Hi! I'm Vitor, a UX/UI designer from Porto / Portugal, who combines design thinking with technical skills to create intuitive interfaces and brand identities.",
+    viewWork: "View Work",
+    getInTouch: "Get in Touch",
+    selectedWork: "Selected Work",
+    workDescription: "Projects demonstrating user-centered design and technical implementation.",
+    uxuiTitle: "UX/UI Design",
+    uxuiDesc: "Digital experiences with user-centered approach and modern interfaces.",
+    portfolio2: "EDIT School Management System",
+    portfolio3: "Cookieng - Sweets with a Twist",
+    logoTitle: "Brand Identity",
+    logoDesc: "Visual identities that communicate brand values.",
+    productTitle: "Product Design",
+    productDesc: "Graphic designs for product marketing.",
+    flyerTitle: "Flyer Design",
+    flyerDesc: "Promotional materials for cultural events.",
+    aboutTitle: "About Me",
+    aboutText: "UX/UI Designer with 9+ years of graphic design experience. I combine design thinking methodology with technical skills to create intuitive interfaces and effective brand identities.",
+    linkedin: "LinkedIn",
+    downloadCV: "Download CV",
+    uxuiSkills: "Relevant Skills",
+    technicalSkills: "Software",
+    certs: "🎓 Education",
+    fcup: "Faculty of Sciences, University of Porto",
+    contactTitle: "Let's work together!",
+    copy: "Copy Email",
+    copied: "Copied!",
+    location: "Location",
+    locationValue: "Porto, Portugal",
+    languages: "Languages",
+    languagesValue: "Portuguese (Native), English (C1)",
+    workPreference: "Work Preference",
+    workPreferenceValue: "On-site, Hybrid or Remote",
+    viewLinkedin: "Connect professionally",
+    viewAbout: "Learn more",
+    viewCV: "View resume",
+    footerText: "© 2025 Vitor Pinto. All rights reserved."
+},
     pt: {
-        work: "Trabalhos",
-        about: "Sobre",
-        contact: "Contacto",
-        available: "Disponível para trabalho remoto",
-        heroTitle: "Criando experiências digitais que",
-        heroHighlight: "fazem a diferença",
-        heroSubtitle: "Designer UX/UI com mais de 9 anos de experiência combinando metodologia design thinking com competências técnicas frontend para criar interfaces intuitivas e identidades de marca significativas.",
-        viewWork: "Ver Trabalhos",
-        getInTouch: "Entrar em Contacto",
-        selectedWork: "Trabalhos Selecionados",
-        workDescription: "Uma mostra de projetos que demonstram a minha abordagem ao design centrado no utilizador e implementação técnica.",
-        uxuiTitle: "Design UX/UI",
-        uxuiDesc: "Experiências digitais projetadas com abordagem centrada no utilizador e padrões de interface modernos.",
-        portfolio2: "Sistema de Gestão, EDIT",
-        portfolio3: "Cookieng - Doces com um Twist",
-        logoTitle: "Identidade de Marca",
-        logoDesc: "Sistemas de marca abrangentes e identidades visuais que comunicam eficazmente os valores da marca.",
-        musicTitle: "Artwork Musical",
-        musicDesc: "Capas de álbuns e designs visuais relacionados com música que capturam a essência do som através de imagens.",
-        productTitle: "Design de Produto",
-        productDesc: "Designs gráficos que combinam visuais marcantes com comunicação eficaz para marketing de produtos.",
-        flyerTitle: "Design de Flyers",
-        flyerDesc: "Materiais promocionais e de eventos projetados para captar atenção e comunicar informações-chave de forma eficaz.",
-        aboutTitle: "Sobre Mim",
-        aboutText: "Olá! Sou o Vitor, um designer UX/UI que combina metodologia design thinking com competências técnicas frontend para criar interfaces intuitivas e identidades de marca significativas. Com mais de 9 anos de experiência em design, acredito que cada projeto é uma oportunidade para compreender profundamente os utilizadores e criar soluções que realmente fazem a diferença nas suas vidas.",
-        linkedin: "LinkedIn",
-        downloadCV: "Baixar CV",
-        uxuiSkills: "Competências UX/UI",
-        technicalSkills: "Competências Técnicas",
-        designProcess: "Processo de Design",
-        certs: "Certificações Recentes",
-        fcup: "Faculdade de Ciências da Universidade do Porto",
-        contactTitle: "Vamos trabalhar juntos",
-        copy: "Copiar Email",
-        copied: "Copiado!",
-        location: "Localização",
-        locationValue: "Porto, Portugal",
-        languages: "Idiomas",
-        languagesValue: "Português (Nativo), Inglês (C1)",
-        workPreference: "Preferência de Trabalho",
-        workPreferenceValue: "Remoto, Híbrido, Presencial",
-        viewLinkedin: "Conecta comigo profissionalmente",
-        viewAbout: "Descobre mais sobre mim",
-        viewCV: "Podes ver aqui o meu currículo", 
-        footerText: "© 2025 Vitor Pinto. Todos os direitos reservados. Desenhado e desenvolvido com paixão no Porto, Portugal."
-    }
+    work: "Trabalhos",
+    about: "Sobre",
+    contact: "Contacto",
+    available: "Disponível para trabalho remoto",
+    heroTitle: "A criar experiências digitais que",
+    heroHighlight: "fazem a diferença",
+    heroSubtitle: "Olá! Sou o Vitor, designer UX/UI do Porto que combina design thinking com competências técnicas para criar interfaces intuitivas e identidades de marca.",
+    viewWork: "Ver Trabalhos",
+    getInTouch: "Entrar em Contacto",
+    selectedWork: "Trabalhos Selecionados",
+    workDescription: "Projetos que demonstram design centrado no utilizador e implementação técnica.",
+    uxuiTitle: "Design UX/UI",
+    uxuiDesc: "Experiências digitais com abordagem centrada no utilizador e interfaces modernas.",
+    portfolio2: "Sistema de Gestão, EDIT",
+    portfolio3: "Cookieng - Doces com um Twist",
+    logoTitle: "Identidade de Marca",
+    logoDesc: "Identidades visuais que comunicam valores das marcas.",
+    productTitle: "Design de Produto",
+    productDesc: "Designs gráficos para marketing de produtos.",
+    flyerTitle: "Design de Flyers",
+    flyerDesc: "Materiais promocionais para eventos culturais.",
+    aboutTitle: "Sobre Mim",
+    aboutText: "Designer UX/UI com mais de 9 anos de experiência em design gráfico. Combino metodologia design thinking com competências técnicas para criar interfaces intuitivas e identidades de marca eficazes.",
+    linkedin: "LinkedIn",
+    downloadCV: "Baixar CV",
+    uxuiSkills: "Competências Relevantes",
+    technicalSkills: "Software",
+    certs: "🎓 Experiência Académica",
+    fcup: "Faculdade de Ciências da Universidade do Porto",
+    contactTitle: "Vamos trabalhar juntos!",
+    copy: "Copiar Email",
+    copied: "Copiado!",
+    location: "Localização",
+    locationValue: "Porto, Portugal",
+    languages: "Idiomas",
+    languagesValue: "Português (Nativo), Inglês (C1)",
+    workPreference: "Preferência de Trabalho",
+    workPreferenceValue: "Presencial, Híbrido ou Remoto",
+    viewLinkedin: "Conectar profissionalmente",
+    viewAbout: "Saber mais",
+    viewCV: "Ver currículo",
+    footerText: "© 2025 Vitor Pinto. Todos os direitos reservados."
+}
 };
 
 let currentLanguage = 'en';
 let isNavigating = false;
 
-// Initialize application with performance optimizations
+// Initialize application with Apple-inspired optimizations
 document.addEventListener('DOMContentLoaded', () => {
     initializeLanguage();
     initializeAnimations();
@@ -108,11 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSmoothScroll();
     initializeImageOptimization();
     initializePerformanceOptimizations();
+    initializeAppleFeatures();
 });
 
-// Language Management (otimizado)
+// Language Management (optimizado)
 function initializeLanguage() {
-    // Use localStorage com fallback
     try {
         currentLanguage = localStorage.getItem('language') || 'en';
     } catch (e) {
@@ -123,12 +117,12 @@ function initializeLanguage() {
 }
 
 function toggleLanguage() {
-    if (isNavigating) return; // Previne múltiplos cliques
+    if (isNavigating) return;
     
     isNavigating = true;
     currentLanguage = currentLanguage === 'en' ? 'pt' : 'en';
     
-    // Animação suave no toggle
+    // Apple-style animation
     const toggle = document.querySelector('.language-toggle');
     if (toggle) {
         toggle.style.transform = 'scale(0.95)';
@@ -140,14 +134,12 @@ function toggleLanguage() {
     updateContent();
     updateLanguageButton();
     
-    // Save to localStorage with error handling
     try {
         localStorage.setItem('language', currentLanguage);
     } catch (e) {
         console.warn('Cannot save language preference');
     }
     
-    // Handle portfolio item page redirects
     handlePortfolioRedirection();
     
     setTimeout(() => {
@@ -156,7 +148,6 @@ function toggleLanguage() {
 }
 
 function updateContent() {
-    // Use DocumentFragment para melhor performance
     const elements = document.querySelectorAll('[data-translate]');
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
@@ -166,7 +157,6 @@ function updateContent() {
         }
     });
 
-    // Update CV link
     updateCVLink();
 }
 
@@ -174,7 +164,7 @@ function updateCVLink() {
     const cvLinks = document.querySelectorAll('#cv-link');
     cvLinks.forEach(cvLink => {
         if (cvLink) {
-            const cvFile = currentLanguage === 'pt' ? 'vitorcv2025.pdf' : 'vitorcv2025-en.pdf';
+            const cvFile = currentLanguage === 'pt' ? 'vitorcv2025-en.pdf' : 'vitorcv2025-en.pdf';
             cvLink.href = cvFile;
             cvLink.download = cvFile;
         }
@@ -211,9 +201,8 @@ function handlePortfolioRedirection() {
     }
 }
 
-// Animations (otimizado para performance)
+// Apple-style animations
 function initializeAnimations() {
-    // Use Intersection Observer para animações mais eficientes
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -225,22 +214,22 @@ function initializeAnimations() {
                 const target = entry.target;
                 target.style.opacity = '1';
                 target.style.transform = 'translateY(0)';
-                observer.unobserve(target); // Remove observer após animação
+                observer.unobserve(target);
             }
         });
     }, observerOptions);
 
-    // Observe elements for animation com delay otimizado
-    const animatedElements = document.querySelectorAll('.project-card, .brand-card, .music-card, .print-card');
+    // Apple-style staggered animation
+    const animatedElements = document.querySelectorAll('.project-card, .brand-card, .print-card');
     animatedElements.forEach((el, index) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.6s ease ${Math.min(index * 0.1, 1)}s, transform 0.6s ease ${Math.min(index * 0.1, 1)}s`;
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = `opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${Math.min(index * 0.08, 0.6)}s, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) ${Math.min(index * 0.08, 0.6)}s`;
         observer.observe(el);
     });
 }
 
-// Portfolio Navigation (otimizado)
+// Portfolio Navigation (optimizado)
 function openPortfolioItem(itemNumber) {
     if (isNavigating) return;
     
@@ -248,7 +237,7 @@ function openPortfolioItem(itemNumber) {
     const langSuffix = currentLanguage === 'pt' ? '' : 'en';
     const url = `portfolio-item-${itemNumber}${langSuffix ? langSuffix : ''}.html`;
     
-    // Preload da página antes de navegar
+    // Apple-style smooth transition
     const link = document.createElement('link');
     link.rel = 'prefetch';
     link.href = url;
@@ -259,19 +248,17 @@ function openPortfolioItem(itemNumber) {
     }, 100);
 }
 
-// Lightbox Functionality (melhorado)
+// Enhanced Lightbox
 function initializeLightbox() {
     const lightbox = document.getElementById('lightbox');
     if (!lightbox) return;
 
-    // Event delegation para melhor performance
     lightbox.addEventListener('click', function(e) {
         if (e.target === this) {
             closeLightbox();
         }
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) {
             closeLightbox();
@@ -285,17 +272,19 @@ function openLightbox(imageSrc) {
     
     if (!lightbox || !lightboxImg) return;
     
-    // Preload image
     const img = new Image();
     img.onload = () => {
         lightboxImg.src = imageSrc;
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
         
-        // Smooth fade in
+        // Apple-style fade in
         lightboxImg.style.opacity = '0';
+        lightboxImg.style.transform = 'scale(0.9)';
         requestAnimationFrame(() => {
+            lightboxImg.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             lightboxImg.style.opacity = '1';
+            lightboxImg.style.transform = 'scale(1)';
         });
     };
     img.src = imageSrc;
@@ -307,17 +296,17 @@ function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
         
-        // Clear image src para libertar memória
         const lightboxImg = document.getElementById('lightbox-image');
         if (lightboxImg) {
             setTimeout(() => {
                 lightboxImg.src = '';
+                lightboxImg.style.transition = '';
             }, 300);
         }
     }
 }
 
-// Navigation Enhancement (otimizado)
+// Apple-style Navigation
 function initializeNavigation() {
     const nav = document.querySelector('.nav');
     if (!nav) return;
@@ -328,15 +317,17 @@ function initializeNavigation() {
     function updateNav() {
         const scrollY = window.scrollY;
         
-        // Reduz calls desnecessárias
         if (Math.abs(scrollY - lastScrollY) < 5 && ticking) return;
         
-        if (scrollY > 100) {
-            nav.style.background = 'rgba(0, 0, 0, 0.9)';
+        // Apple-style backdrop blur effect
+        if (scrollY > 50) {
+            nav.style.background = 'rgba(250, 250, 250, 0.8)';
             nav.style.backdropFilter = 'blur(20px)';
+            nav.style.borderBottomColor = 'rgba(0, 0, 0, 0.1)';
         } else {
-            nav.style.background = 'rgba(0, 0, 0, 0.85)';
+            nav.style.background = 'rgba(250, 250, 250, 0.9)';
             nav.style.backdropFilter = 'blur(20px)';
+            nav.style.borderBottomColor = 'rgba(0, 0, 0, 0.05)';
         }
 
         lastScrollY = scrollY;
@@ -350,13 +341,11 @@ function initializeNavigation() {
         }
     }
 
-    // Use passive listener para melhor performance
     window.addEventListener('scroll', requestTick, { passive: true });
 }
 
-// Smooth Scroll (otimizado)
+// Enhanced Smooth Scroll
 function initializeSmoothScroll() {
-    // Event delegation para links internos
     document.addEventListener('click', function(e) {
         const link = e.target.closest('a[href^="#"]');
         if (!link) return;
@@ -364,7 +353,7 @@ function initializeSmoothScroll() {
         e.preventDefault();
         const target = document.querySelector(link.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 100;
+            const offsetTop = target.offsetTop - 80; // Account for nav height
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -373,7 +362,7 @@ function initializeSmoothScroll() {
     });
 }
 
-// Email Copy Functionality (melhorado)
+// Enhanced Email Copy
 function copyEmail() {
     const email = 'vitorlanzanapinto@gmail.com';
     
@@ -413,8 +402,14 @@ function showCopyFeedback() {
     const originalText = button.textContent;
     const copiedText = translations[currentLanguage].copied;
     
+    // Apple-style success animation
     button.textContent = copiedText;
     button.classList.add('copied');
+    button.style.transform = 'scale(0.95)';
+    
+    setTimeout(() => {
+        button.style.transform = '';
+    }, 150);
     
     setTimeout(() => {
         button.textContent = originalText;
@@ -422,9 +417,8 @@ function showCopyFeedback() {
     }, 2000);
 }
 
-// Image optimization (novo)
+// Enhanced Image Optimization
 function initializeImageOptimization() {
-    // Lazy loading nativo quando suportado
     if ('loading' in HTMLImageElement.prototype) {
         const images = document.querySelectorAll('img');
         images.forEach(img => {
@@ -433,7 +427,6 @@ function initializeImageOptimization() {
             }
         });
     } else {
-        // Fallback para browsers mais antigos
         initializeLazyLoading();
     }
 }
@@ -458,20 +451,71 @@ function initializeLazyLoading() {
     lazyImages.forEach(img => imageObserver.observe(img));
 }
 
-// Performance optimizations (novo)
-function initializePerformanceOptimizations() {
-    // Preload critical resources
-    preloadCriticalResources();
+// Apple-specific features
+function initializeAppleFeatures() {
+    // Reduced motion support
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+    }
     
-    // Initialize touch optimizations for mobile
+    // Enhanced touch interactions
     initializeTouchOptimizations();
     
-    // Debounce resize events
+    // Parallax scroll indicator
+    initializeScrollIndicator();
+}
+
+function initializeTouchOptimizations() {
+    if (!('ontouchstart' in window)) return;
+
+    const cards = document.querySelectorAll('.project-card, .brand-card, .print-card');
+    cards.forEach(card => {
+        let touchStartTime;
+        
+        card.addEventListener('touchstart', function(e) {
+            touchStartTime = Date.now();
+            this.style.transform = 'scale(0.97)';
+            this.style.transition = 'transform 0.1s ease';
+        }, { passive: true });
+        
+        card.addEventListener('touchend', function(e) {
+            const touchEndTime = Date.now();
+            const touchDuration = touchEndTime - touchStartTime;
+            
+            setTimeout(() => {
+                this.style.transform = '';
+                this.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+            }, touchDuration < 150 ? 150 - touchDuration : 0);
+        }, { passive: true });
+    });
+}
+
+function initializeScrollIndicator() {
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    if (!scrollIndicator) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                scrollIndicator.style.opacity = '1';
+            } else {
+                scrollIndicator.style.opacity = '0.5';
+            }
+        });
+    });
+    
+    const hero = document.querySelector('.hero');
+    if (hero) observer.observe(hero);
+}
+
+// Performance optimizations
+function initializePerformanceOptimizations() {
+    preloadCriticalResources();
+    
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            // Handle resize events here
             handleResize();
         }, 250);
     }, { passive: true });
@@ -493,79 +537,24 @@ function preloadCriticalResources() {
     });
 }
 
-function initializeTouchOptimizations() {
-    if (!('ontouchstart' in window)) return;
-
-    // Add touch feedback for cards
-    const cards = document.querySelectorAll('.project-card, .brand-card, .music-card, .print-card');
-    cards.forEach(card => {
-        card.addEventListener('touchstart', function() {
-            this.style.transform = 'scale(0.98)';
-        }, { passive: true });
-        
-        card.addEventListener('touchend', function() {
-            setTimeout(() => {
-                this.style.transform = '';
-            }, 150);
-        }, { passive: true });
-    });
-}
-
 function handleResize() {
-    // Handle responsive changes if needed
-    const nav = document.querySelector('.nav');
-    if (nav && window.innerWidth <= 768) {
-        nav.style.left = '16px';
-        nav.style.right = '16px';
-        nav.style.transform = 'none';
-    } else if (nav) {
-        nav.style.left = '50%';
-        nav.style.right = 'auto';
-        nav.style.transform = 'translateX(-50%)';
-    }
-}
-
-// Utility functions
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-function throttle(func, limit) {
-    let lastFunc;
-    let lastRan;
-    return function() {
-        const context = this;
-        const args = arguments;
-        if (!lastRan) {
-            func.apply(context, args);
-            lastRan = Date.now();
-        } else {
-            clearTimeout(lastFunc);
-            lastFunc = setTimeout(function() {
-                if ((Date.now() - lastRan) >= limit) {
-                    func.apply(context, args);
-                    lastRan = Date.now();
-                }
-            }, limit - (Date.now() - lastRan));
-        }
+    // Responsive adjustments
+    const viewportWidth = window.innerWidth;
+    
+    if (viewportWidth <= 768) {
+        // Mobile optimizations
+        document.body.classList.add('mobile');
+    } else {
+        document.body.classList.remove('mobile');
     }
 }
 
 // Error handling
 window.addEventListener('error', function(e) {
     console.error('Application error:', e.error);
-    // Pode adicionar reporting aqui se necessário
 });
 
-// Performance monitoring (opcional)
+// Performance monitoring
 if ('performance' in window) {
     window.addEventListener('load', () => {
         setTimeout(() => {

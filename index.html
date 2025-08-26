@@ -56,11 +56,15 @@
 
     <!-- Hero Section -->
     <section class="hero" role="banner">
+        <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./videos/background-video.mp4" type="video/mp4">
+    </video>
+
         <div class="hero-content">
-            <div class="hero-badge">
+            <!-- <div class="hero-badge">
                 <div class="status-dot" aria-hidden="true"></div>
                 <span data-translate="available">Available for remote work</span>
-            </div>
+            </div> -->
             <h1 class="hero-title">
                 <span data-translate="heroTitle">Designing digital experiences that</span>
                 <span class="gradient-text" data-translate="heroHighlight">make a difference</span>
@@ -74,25 +78,18 @@
                 <a href="contact.html" class="btn-secondary" data-translate="getInTouch">Get in Touch</a>
             </div>
         </div>
-        <div class="hero-scroll" aria-hidden="true">
+        <!-- <div class="hero-scroll" aria-hidden="true">
             <div class="scroll-indicator"></div>
-        </div>
+        </div> -->
     </section>
 
     <!-- Work Section -->
     <main id="work" class="work-section" role="main">
         <div class="container">
-            <!-- <div class="section-header">
-                <h2 class="section-title" data-translate="selectedWork">Selected Work</h2>
-                <p class="section-subtitle" data-translate="workDescription">
-                    A showcase of projects that demonstrate my approach to user-centered design and technical implementation.
-                </p>
-            </div> -->
-
-            <!-- UX/UI Design -->
+            <!-- UX/UI Design - 1ª Posição -->
             <div class="project-category">
                 <div class="category-header">
-                    <h3 class="category-title" data-translate="uxuiTitle">UX/UI Design</h3>
+                    <h2 class="category-title" data-translate="uxuiTitle">UX/UI Design</h2>
                     <p class="category-desc" data-translate="uxuiDesc">Digital experiences designed with user-centered approach and modern interface patterns.</p>
                 </div>
                 <div class="project-grid" id="uxui-grid">
@@ -108,8 +105,8 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <h4>Generali Tranquilidade Loyalty App</h4>
-                            <span class="project-tag">UX Research & Design</span>
+                            <h3>Generali Tranquilidade Loyalty App</h3>
+                            <span class="project-tag">UX Research & App Design</span>
                         </div>
                     </article>
                     
@@ -125,8 +122,8 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <h4 data-translate="portfolio2">Edit School Management System</h4>
-                            <span class="project-tag">UI/UX Design</span>
+                            <h3 data-translate="portfolio2">Edit School Management System</h3>
+                            <span class="project-tag">UX Research & App Design</span>
                         </div>
                     </article>
                     
@@ -142,20 +139,20 @@
                             </div>
                         </div>
                         <div class="project-info">
-                            <h4 data-translate="portfolio3">Cookieng - Sweets with a Twist</h4>
-                            <span class="project-tag">User Experience</span>
+                            <h3 data-translate="portfolio3">Cookieng - Sweets with a Twist</h3>
+                            <span class="project-tag">UX Research & App Design</span>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <!-- Brand Identity -->
+            <!-- Brand Identity - 2ª Posição (MOVIDA PARA AQUI) -->
             <section class="project-category">
                 <div class="category-header">
-                    <h3 class="category-title" data-translate="logoTitle">Brand Identity</h3>
+                    <h2 class="category-title" data-translate="logoTitle">Brand Identity</h2>
                     <p class="category-desc" data-translate="logoDesc">Comprehensive brand systems and visual identities that communicate brand values effectively.</p>
                 </div>
-                <div class="project-grid brand-grid">
+                <div class="brand-grid">
                     <article class="brand-card" onclick="openLightbox('./images/logos/GieluxPreviewbig.png')" role="button" tabindex="0" aria-label="View Gielux brand identity">
                         <img src="./images/logos/GieluxPreview.png" 
                              alt="Gielux Brand Identity Design" 
@@ -163,20 +160,8 @@
                              width="200" 
                              height="200">
                         <div class="brand-overlay" aria-hidden="true">
-                            <h4>Gielux</h4>
-                            <span>Brand Identity</span>
-                        </div>
-                    </article>
-                    
-                    <article class="brand-card" onclick="openLightbox('./images/logos/SacramentoPreviewbig.png')" role="button" tabindex="0" aria-label="View Sacramento logo design">
-                        <img src="./images/logos/SacramentoPreview.png" 
-                             alt="Sacramento Logo Design" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                        <div class="brand-overlay" aria-hidden="true">
-                            <h4>Sacramento</h4>
-                            <span>Logo Design</span>
+                            <h3>Gielux</h3>
+                            <span>Electrical services company</span>
                         </div>
                     </article>
                     
@@ -187,8 +172,8 @@
                              width="200" 
                              height="200">
                         <div class="brand-overlay" aria-hidden="true">
-                            <h4>Muna</h4>
-                            <span>Visual Identity</span>
+                            <h3>Muna</h3>
+                            <span>Microgreens and edible flowers supplier</span>
                         </div>
                     </article>
                     
@@ -199,8 +184,8 @@
                              width="200" 
                              height="200">
                         <div class="brand-overlay" aria-hidden="true">
-                            <h4>Sempre Bio</h4>
-                            <span>Brand System</span>
+                            <h3>Sempre Bio</h3>
+                            <span>Vegetable box delivery service</span>
                         </div>
                     </article>
                     
@@ -211,8 +196,8 @@
                              width="200" 
                              height="200">
                         <div class="brand-overlay" aria-hidden="true">
-                            <h4>Biruta</h4>
-                            <span>Logo & Identity</span>
+                            <h3>Biruta</h3>
+                            <span>Music agency & concert booking</span>
                         </div>
                     </article>
                     
@@ -223,98 +208,17 @@
                              width="200" 
                              height="200">
                         <div class="brand-overlay" aria-hidden="true">
-                            <h4>Quadros Soluções</h4>
-                            <span>Corporate Identity</span>
+                            <h3>Quadros Soluções</h3>
+                            <span>Electrical supplies company</span>
                         </div>
                     </article>
                 </div>
             </section>
 
-            <!-- Music Artworks -->
+            <!-- Product Design - 3ª Posição -->
             <section class="project-category">
                 <div class="category-header">
-                    <h3 class="category-title" data-translate="musicTitle">Music Artworks</h3>
-                    <p class="category-desc" data-translate="musicDesc">Creative album covers and music-related visual designs that capture the essence of sound through imagery.</p>
-                </div>
-                <div class="music-grid">
-                    <article class="music-card" onclick="openLightbox('./images/music/corona1big.png')" role="button" tabindex="0" aria-label="View Corona music artwork">
-                        <img src="./images/music/corona1.png" 
-                             alt="Corona Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/mgs1big.png')" role="button" tabindex="0" aria-label="View MGS music artwork">
-                        <img src="./images/music/mgs1.png" 
-                             alt="MGS Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/mgsatwbig.png')" role="button" tabindex="0" aria-label="View MGS ATW music artwork">
-                        <img src="./images/music/mgsatw.png" 
-                             alt="MGS ATW Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/mgsneverneverbig.png')" role="button" tabindex="0" aria-label="View MGS Never Never music artwork">
-                        <img src="./images/music/mgsnevernever.png" 
-                             alt="MGS Never Never Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/mgswwwbig.png')" role="button" tabindex="0" aria-label="View MGS WWW music artwork">
-                        <img src="./images/music/mgswww.png" 
-                             alt="MGS WWW Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/nr1big.png')" role="button" tabindex="0" aria-label="View NR music artwork">
-                        <img src="./images/music/nr1.png" 
-                             alt="NR Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/pa1big.png')" role="button" tabindex="0" aria-label="View PA music artwork">
-                        <img src="./images/music/pa1.png" 
-                             alt="PA Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/dpp1big.png')" role="button" tabindex="0" aria-label="View DPP music artwork">
-                        <img src="./images/music/dpp1.png" 
-                             alt="DPP Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                    
-                    <article class="music-card" onclick="openLightbox('./images/music/nr2big.png')" role="button" tabindex="0" aria-label="View NR2 music artwork">
-                        <img src="./images/music/nr2.png" 
-                             alt="NR2 Music Album Artwork" 
-                             loading="lazy"
-                             width="200" 
-                             height="200">
-                    </article>
-                </div>
-            </section>
-
-            <!-- Product Design -->
-            <section class="project-category">
-                <div class="category-header">
-                    <h3 class="category-title" data-translate="productTitle">Product Design</h3>
+                    <h2 class="category-title" data-translate="productTitle">Product Design</h2>
                     <p class="category-desc" data-translate="productDesc">Print designs that combine striking visuals with effective communication for product marketing.</p>
                 </div>
                 <div class="print-grid">
@@ -352,10 +256,10 @@
                 </div>
             </section>
 
-            <!-- Flyer Design -->
+            <!-- Flyer Design - 4ª Posição -->
             <section class="project-category">
                 <div class="category-header">
-                    <h3 class="category-title" data-translate="flyerTitle">Flyer Design</h3>
+                    <h2 class="category-title" data-translate="flyerTitle">Flyer Design</h2>
                     <p class="category-desc" data-translate="flyerDesc">Event and promotional materials designed to capture attention and communicate key information effectively.</p>
                 </div>
                 <div class="print-grid">
